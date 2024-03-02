@@ -8,10 +8,10 @@ const todoSlice = createSlice({
                 console.log(action.payload);
                 state.push(action.payload);
         },
-        removeUser:(state,action)=>{
-
+        removeTodo:(state,action)=>{
+              state.splice(action.payload,1);
         },
-        deleteUsers:(state,action)=>{
+        deleteTodos:(state,action)=>{
 
         }
     }
@@ -21,4 +21,4 @@ const todoSlice = createSlice({
 
 
 export default todoSlice.reducer;
-export const {addTodo} = todoSlice.actions; 
+export const {addTodo,removeTodo} = todoSlice.actions; 
